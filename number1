@@ -1,0 +1,41 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+int main()
+{
+	int list[10], i, maxnum, minnum;
+	double average, sum;
+
+	for(i = 0; i < 10; i++)
+		cin >> list[i];
+
+	sum = 0;
+	for(i = 0; i < 10; i++)
+	{
+		sum = sum + list[i];
+		average = sum / 10;
+	}
+
+	minnum = list[0];
+	for(i = 0; i < 10; i++)
+	{
+		if (minnum > list[i])
+			minnum = list[i];
+	}
+
+	maxnum = list[0];
+	for(i = 0; i < 10; i++)
+	{
+		if (maxnum < list[i])
+			maxnum = list[i];
+	}
+
+	cout << "The sum is: " << sum << endl;
+	cout << "The average is: " << average << endl;
+	cout << "The largest number is: " << maxnum << endl;
+	cout << "The smallest number is: " << minnum << endl;
+
+	_getch();
+	return 0;
+}
