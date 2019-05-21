@@ -1,0 +1,52 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+int main()
+{
+	const int days = 7;
+
+	int temp[days];
+
+	cout << "Enter the seven-day temperature of the three province respectively: " << endl;
+
+		for (int j = 0; j < days; j++)
+		{
+			cout << "Province A " << ", Day " << j + 1 << ": ";
+			cin >> temp[j];
+		}
+
+		for (int k = 0; k < days; k++)
+		{
+			cout << "Province B " << ", Day " << k + 1 << ": ";
+			cin >> temp[k];
+		}
+
+		for (int l = 0; l < days; l++)
+		{
+			cout << "Province C " << ", Day " << l + 1 << ": ";
+			cin >> temp[l];
+		}
+	cout << "\nDisplaying Values: \n";
+
+	for (int j = 0; j < days; j++)
+		{
+			cout << "Province A " << ", Day " << j + 1 << ": " << temp[j];
+			cout << endl;
+		}
+
+	for (int k = 0; k < days; k++)
+		{
+			cout << "Province B " << ", Day " << k + 1 << ": " << temp[k];
+			cout << endl;
+		}
+
+	for (int l = 0; l < days; l++)
+		{
+			cout << "Province C " << ", Day " << l + 1 << ": " << temp[l];
+			cout << endl;
+		}
+
+	_getch();
+	return 0;
+}
