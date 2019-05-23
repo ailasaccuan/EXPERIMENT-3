@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+int main ()
+{
+    char choice[100], temp;
+    int ord=0, i, j;
+    cout << "Enter characters and/or integers: ";
+    cin.getline(choice, 100);
+	    
+	for (i = 0; choice[i]!='\0'; i++)
+    {ord++;}
+	for (i=0; i<ord; i++)
+	{
+		for (j=i+1; j<ord; j++)
+		{
+			if (choice[i] > choice[j])
+			{
+				temp = choice[i];
+				choice[i] = choice[j];
+				choice[j] = temp;
+			}
+		}
+	}
+	cout << "The reverse order of the entered data: "<< choice << endl;
+  cout << "Size of the array: " << strlen(choice) << endl;
+
+	_getch();
+    return 0;
+}
